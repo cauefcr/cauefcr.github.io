@@ -2,6 +2,8 @@
 layout: default
 ---
 
+#[This page in english](./index-en.html)
+
 # Olá, mundo
 
 Essa é minha página, aqui eu lhe [conto sobre mim](./about-pt.html), mostro algumas coisas que eu fiz e tento te convencer a me chamar para seu proximo projeto.
@@ -18,7 +20,7 @@ Com o problema do controle programático das câmeras resolvido utilizei do Open
 
 ## 3. Projeto 
 #### Fat-array
-Vetores dinâmicos utilizando macros em C para garantir tipagem forte e flexibilidade na utilização
+Vetores dinâmicos utilizando macros em C para garantir tipagem forte e flexibilidade na utilização, disponivel [aqui](https://github.com/cauefcr/Fat-Array)
 
 ## 4. Jogo
 Fiz um jogo em construct 2, neste jogo você está no papel de um monstro tentando defender sua torre dos malditos aventureiros gananciosos, jogue-o [aqui](htpps://caue.site/whosinmytower)
