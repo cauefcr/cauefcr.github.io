@@ -22,7 +22,7 @@ Com o problema do controle programático das câmeras resolvido utilizei do Open
 Vetores dinâmicos utilizando macros em C para garantir tipagem forte e flexibilidade na utilização, disponivel [aqui](https://github.com/cauefcr/Fat-Array)
 
 ## 4. Jogo
-Fiz um jogo em construct 2, neste jogo você está no papel de um monstro tentando defender sua torre dos malditos aventureiros gananciosos, jogue-o [aqui](htpps://caue.site/whosinmytower)
+Fiz um jogo em construct 2, neste jogo você está no papel de um monstro tentando defender sua torre dos malditos aventureiros gananciosos, jogue-o [aqui](https://caue.site/whosinmytower)
 
 &copy;2018 Cauê Felchar, 
 não hesite em contatar no <a href="mailto:caue.fcr<at>gmail.com">caue.fcr< at >gmail.com</a>
