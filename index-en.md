@@ -21,7 +21,7 @@ Solved the pragmatic camera control problem i used OpenCV to open the camera fee
 Dinamic vectors of arbitrary type using C to guarantee strong typing and utilization flexibility. Available [here](https://github.com/cauefcr/Fat-Array)
 
 ## 4. Game
-I created a game with Construct 2, in this game you're the monster, trying to protect your tower from the pesky, greedy adventurers, play [here](htpps://caue.site/whosinmytower)
+I created a game with Construct 2, in this game you're the monster, trying to protect your tower from the pesky, greedy adventurers, play [here](https://caue.site/whosinmytower)
 
 &copy;2018 Cauê Felchar, 
 Feel free to contact me at <a href="mailto:caue.fcr<at>gmail.com">caue.fcr< at >gmail.com</a>
