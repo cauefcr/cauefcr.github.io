@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/cauefcr
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://caue.site
+  * I am cauefcr (https://keybase.io/cauefcr) on keybase.
+  * I have a public key ASBqn10WBtpgxfG6RQSYPk9g6VhLCVCDzXpgBhrZ7VNGjwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01206a9f5d1606da60c5f1ba4504983e4f60e9584b095083cd7a60061ad9ed53468f0a",
+      "host": "keybase.io",
+      "kid": "01206a9f5d1606da60c5f1ba4504983e4f60e9584b095083cd7a60061ad9ed53468f0a",
+      "uid": "b9c42165a7050f0bde4b634d69e7e519",
+      "username": "cauefcr"
+    },
+    "merkle_root": {
+      "ctime": 1568835348,
+      "hash": "02a86f11d99d213e210bc139e079c8f8cbb4474a12280f2cbb36d290c3dcb7cd734660cbc1931065c24084ccb9184b19b63dfb214773eb290b0b0123c9099ada",
+      "hash_meta": "2180e7a7693990ba98eee5cb6c39ef223da8c859ff339d6ace59115e9c8be8fa",
+      "seqno": 7575393
+    },
+    "service": {
+      "entropy": "oEv6QvuKtSPT01Dm0Ez8FlDE",
+      "hostname": "caue.site",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.4.2"
+  },
+  "ctime": 1568835359,
+  "expire_in": 504576000,
+  "prev": "4f4e186bc048483ce545edb44935d23757ffc9070d12b45820b8694261d74bf6",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgap9dFgbaYMXxukUEmD5PYOlYSwlQg816YAYa2e1TRo8Kp3BheWxvYWTESpcCBsQgT04Ya8BISDzlRe20STXSN1f/yQcNErRYILhpQmHXS/bEIIlKgHzoKW3sViNQdoYPdB0WkPMvD4bJpGhFEsGfATrGAgHCo3NpZ8RA0ocHs+jVwXKGIpKWT4037nHuVORpjAdF6dqy9k46fyCJmlzpybqkQVIO97j6GHBPm5jhD3tLWPF80nY5NWe3CahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIPUfIzT+YIgFsyUKfTkRYj4xQcNHzD51B4lSuJXuj5Qmo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/cauefcr
+
+==================================================================
