@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>terminal.js</title>
+  <meta name="description" content="🍦A simple and lightweight Javascript web browser terminal">
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #vanilla-terminal {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body ondrop="drop(event)" ondragover="((e) => e.preventDefault())(event)">
+  <div id="vanilla-terminal"></div>
+  <script src="dist/vanilla-terminal.js"></script>
+  <script>
+    const drops = [];
+    const cmds = {
+      import(instance, parameters){
+        fetch(parameters[0])
+        .then((response) => response.text())
+        .then((text) => window.eval(text))
+        console.log("woo");
+        term.resetCommand();
+      },
+      save(instance, parameters){
+        function download(data, filename, type) {
+          var file = new Blob([data], {type: type});
+          if (window.navigator.msSaveOrOpenBlob) // IE10+
+          window.navigator.msSaveOrOpenBlob(file, filename);
+          else { // Others
+            var a = document.createElement("a"),
+            url = URL.createObjectURL(file);
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(function() {
+              document.body.removeChild(a);
+              window.URL.revokeObjectURL(url);  
+            }, 0); 
+          }
+        }
+        download(term.history.join(";\n"),parameters.join(" "),"application/javascript");
+        term.resetCommand();
+      },
+      lift(instance,parameters){
+        cmds[parameters[0]]=((fn) => function (inst,params){
+          term.output(window.eval(fn)(...params.map(window.eval)))
+          term.resetCommand();
+        })(parameters[0]);
+        term.resetCommand();
+      },
+      yt(instance,parameters){
+        location.href=`https://www.youtube.com/results?search_query=${encodeURIComponent(parameters.join(" "))}`;
+        term.resetCommand();
+      },
+      g(instance,parameters){
+        location.href=`https://www.google.com/search?q=${encodeURIComponent(parameters.join(" "))}`;
+        term.resetCommand();
+      },
+      separator: '>',
+    },term = new VanillaTerminal({
+      commands: cmds
+    })
+    
+    term.setPrompt("js");
+    const lift = (fn_name) => cmds[fn_name]=((fn) => function (inst,params){
+      term.output(window.eval(fn)(...params.map(window.eval)))
+      term.resetCommand();
+    })(fn_name);
+    const linkify = (name,href) => {
+      cmds[name]=function(instance,params){
+        location.href=href;
+      }
+    };
+    async function drop(ev){
+      const FiletoStr = (f) => new Promise(resolve => {
+        var reader = new FileReader();
+        reader.onload = function(){
+          resolve(reader.result);
+          // var text = reader.result;
+          // console.log(reader.result.substring(0, 200));
+        };
+        reader.readAsText(f);
+      });
+      ev.preventDefault();
+      ev.stopPropagation();
+      if (ev.dataTransfer.items) {
+        for (var i = 0; i < ev.dataTransfer.items.length; i++) {
+          if (ev.dataTransfer.items[i].kind === 'file') {
+            var file = ev.dataTransfer.items[i].getAsFile();
+            // console.log('... file[' + i + '].name = ' + file.name);
+            drops.push(await FiletoStr(file));
+            term.output('drops[' + (drops.length-1) + '].name = ' + file.name);
+          }
+        }
+      } else {
+        for (var i = 0; i < ev.dataTransfer.files.length; i++) {
+          term.output('drops[' + (drops.length-1) + '].name = ' + ev.dataTransfer.files[i].name);
+          drops.push(await FiletoStr(ev.dataTransfer.files[i]));
+        }
+      }
+      
+    }
+  </script>
+</body>
+</html>
