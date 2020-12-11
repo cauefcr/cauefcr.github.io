@@ -21,15 +21,11 @@
   <div id="vanilla-terminal"></div>
   <script src="dist/vanilla-terminal.js"></script>
   <script>
+    require = (url) => fetch(url)
+                            .then((response) => response.text())
+                            .then((text) => window.eval(text))
     const drops = [];
     const cmds = {
-      import(instance, parameters){
-        fetch(parameters[0])
-        .then((response) => response.text())
-        .then((text) => window.eval(text))
-        console.log("woo");
-        term.resetCommand();
-      },
       save(instance, parameters){
         function download(data, filename, type) {
           var file = new Blob([data], {type: type});
