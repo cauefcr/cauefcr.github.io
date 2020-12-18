@@ -21,9 +21,12 @@
   <div id="vanilla-terminal"></div>
   <script src="dist/vanilla-terminal.js"></script>
   <script>
-    require = (url) => fetch(url)
-                            .then((response) => response.text())
-                            .then((text) => window.eval(text))
+    window.require = (url) =>{
+      // return window.eval(text);
+      const script = document.createElement('script')
+      script.src = url;
+      document.head.append(script);
+    };
     const drops = [];
     const cmds = {
       save(instance, parameters){
