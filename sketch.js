@@ -13,7 +13,7 @@ function preload(){
 
 function setup() {
   createCanvas(width, height,WEBGL);
-  w = Math.trunc(width/20);
+  w = Math.trunc(width/25);
   // Calculate columns and rows
   columns = Math.round(width / w)+1;
   rows = Math.round(height / w)+1;
@@ -32,30 +32,34 @@ function setup() {
 let i = 0;
 function draw() {
   background(255);
-  fill(0)
+  fill(0,100,0,50)
   stroke(0);
   strokeWeight(0);
   for ( let i = 0; i < columns;i++) {
     for ( let j = 0; j < rows;j++) {
       fill(Math.round(board[i][j]));
-      rect(topleft[0]+i * w,topleft[1]+j * w, w-1, w-1);
+      rect(topleft[0]+i * w,topleft[1]+j * w, w, w);
     }
   }
   i++;
   init(i);
-  fill(0,0,0,50)
+  fill(0,100,0,50);
   rect(topleft[0]+1.5*w,topleft[1]+1.5*w,width-3*w,height-3*w);
-  fill(255-board[0][2],255-board[0][2],255-board[0][2],90);
+  fill(0,100,0,50);
+  rect(topleft[0]+1.5*w+board[0][2]/(255/3)*10,topleft[1]+1.5*w+board[0][2]/(255/3)*10,width-3*w,height-3*w);
   textFont(Font);
   textSize(Math.min(w,height/20));
-  text(`Cauê Felchar, Cientista da computação em formação; caue.fcr @gmail.com, github: cauefcr; Linguagens: C, C++, Go, Javascript, Node, HTML, CSS`, topleft[0]+2*w,topleft[1]+2*w+36,width-4.5*w,height-4.5*w);
+  fill(board[0][2],Math.max(200-board[0][2],0),board[0][2],90);
+  text(`Cauê Felchar, Cientista da computação em formação; caue.fcr @gmail.com, github: cauefcr; Linguagens: C, C++, Go, Python, Javascript, Node, HTML, CSS, ...`, topleft[0]+2*w+board[0][2]/(255/3)*10,topleft[1]+2*w+36+board[0][2]/(255/3)*10,width-4.5*w,height-4.5*w);
+  fill(0,255-board[0][2],0,90);
+  text(`Cauê Felchar, Cientista da computação em formação; caue.fcr @gmail.com, github: cauefcr; Linguagens: C, C++, Go, Python, Javascript, Node, HTML, CSS, ...`, topleft[0]+2*w,topleft[1]+2*w+36,width-4.5*w,height-4.5*w);
 }
 
 // Fill board randomly
 function init(seed) {
   for (let i = 0; i < columns; i++) {
     for (let j = 0; j < rows; j++) {
-      board[i][j]=(Math.sin(j/10-seed/10)*255/2)+255/2;
+      board[i][j]=(Math.sin((j-seed)/25)*255/8)+255/8;
     }
   }
 }
